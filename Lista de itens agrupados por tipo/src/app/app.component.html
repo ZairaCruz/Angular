@@ -1,0 +1,20 @@
+
+<div class="container">
+<h2>Agrupados por células</h2>
+
+
+  <form #agrupados>
+    <div *ngFor="let item of grupoDeServicos">
+
+      <p>{{item.celulaResponsavel}}</p>
+
+      <p *ngFor="let itens of item.servicos">
+        <label>
+          <input type="checkbox" name="servicosAgendados"/>
+          <span>{{itens.descricao}}</span>
+        </label>
+      </p>
+
+    </div>
+  </form>
+</div>
